@@ -1,82 +1,69 @@
 <?php
 
-class LoginObject  {
+class LoginObject {
 
-	protected $idOper;
-	protected $cardId;
-	protected $passwd;
-	protected $token;
-	protected $idClient;
-	protected $org;
+    protected $idOper;
+    protected $cardId;
+    protected $passwd;
+    protected $token;
+    protected $idClient;
+    protected $org;
 
-	 /**
+    /**
      * Constructor.
      *
      * 
      */
-    public function __construct()
-    {
-
+    public function __construct() {
+        
     }
 
-	public function getidOper()
-	{
-		return $this->idOper;
-	}
+    public function getidOper() {
+        return $this->idOper;
+    }
 
-    public function setidOper($idOper)
-    {
+    public function setidOper($idOper) {
         $this->idOper = $idOper;
-    }	
+    }
 
-	public function getcardId()
-	{
-		return $this->cardId;
-	}
+    public function getcardId() {
+        return $this->cardId;
+    }
 
-    public function setcardId($cardId)
-    {
+    public function setcardId($cardId) {
         $this->cardId = $cardId;
-    }	
+    }
 
-	public function getpasswd()
-	{
-		return $this->passwd;
-	}
+    public function getpasswd() {
+        return $this->passwd;
+    }
 
-    public function setpasswd($passwd)
-    {
+    public function setpasswd($passwd) {
         $this->passwd = $passwd;
-    }	
+    }
 
-	public function gettoken()
-	{
-		return $this->token;
-	}
+    public function gettoken() {
+        return $this->token;
+    }
 
-    public function settoken($token)
-    {
+    public function settoken($token) {
         $this->token = $token;
-    }	
+    }
 
-	public function getidClient()
-	{
-		return $this->idClient;
-	}
+    public function getidClient() {
+        return $this->idClient;
+    }
 
-    public function setidClient($idClient)
-    {
+    public function setidClient($idClient) {
         $this->idClient = $idClient;
-    }	
+    }
 
-	public function getorg()
-	{
-		return $this->org;
-	}
+    public function getorg() {
+        return $this->org;
+    }
 
-    public function setorg($org)
-    {
+    public function setorg($org) {
         $this->org = $org;
-    }	
+    }
 
 }
