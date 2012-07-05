@@ -1,13 +1,15 @@
 <?php
 
+namespace models;
+
 class LoginObject {
 
-    protected $idOper;
-    protected $cardId;
-    protected $passwd;
-    protected $token;
-    protected $idClient;
-    protected $org;
+    public $idOper;
+    public $cardId;
+    public $passwd;
+    public $token;
+    public $idClient;
+    public $org;
 
     /**
      * Constructor.

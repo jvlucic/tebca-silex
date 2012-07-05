@@ -1,0 +1,46 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="userContent"> 
+        Bienvenid@ {{user.nombreCliente}}
+    </div>
+    <hr class="lineseparator">
+
+    <div class="cardContainer" > 
+        {% if user.hasPrincipales is not empty %}
+            <div class="typeContainer" >
+                Principales
+            </div>
+        {% endif %}   
+    <hr class="lineseparator2">
+        
+
+        {% for card in user.principales %}
+        <ul class="cardList">
+            <li class="pre_{{card.prefix ~ '_' ~ user.org}}">
+                <a href="/card/{{card.id}}">
+                    <div class="cardName">{{card.nombreProducto}}</div>
+                    <div class="cardMask">{{card.mask}}</div>
+                </a>
+            </li>
+        </ul>
+        {% endfor %}
+
+        
+        
+        {% if user.hasSuplementarias is not empty %}
+            <div class="typeContainer" >
+                Sumplementarias
+            </div>
+        {% endif %}   
+
+        {% for card in user.suplementarias %}
+            <ul class="cardList">
+                <li class="pre_{{card.prefix ~ '_' ~ user.org}}"><a href="/card/{{card.id}}">{{card.nombreProducto}}</a></li>
+            </ul>
+        {% endfor %}
+
+
+    </div>
+
+{%endblock%}

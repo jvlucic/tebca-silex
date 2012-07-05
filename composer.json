@@ -3,6 +3,8 @@
         "silex/silex": "1.0.*",
         "symfony/browser-kit": "2.1.*",
         "symfony/console": "2.1.*",
+        "symfony/config": "2.1.*",
+        "symfony/translation": "2.1.*",        
         "symfony/css-selector": "2.1.*",
         "symfony/dom-crawler": "2.1.*",
         "symfony/filesystem": "2.1.*",
@@ -17,8 +19,12 @@
         "symfony/monolog-bridge": "2.1.*",
         "symfony/twig-bridge": "2.1.*",
         "monolog/monolog": ">=1.0.0,<1.2-dev",
-        "twig/twig": ">=1.2.0,<2.0-dev",
+        "twig/twig": ">=1.8.0,<2.0-dev",
         "doctrine/dbal": "2.1.*",
-        "swiftmailer/swiftmailer": "4.1.*"
+        "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev",
+	"guzzle/guzzle": "*",
+        "guzzle/silex-provider":"*",
+	"symfony/yaml": "2.1.*"
+
     }
 }

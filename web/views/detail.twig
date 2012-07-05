@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="userContent"> 
+        Bienvenid@ {{user.nombreCliente}}
+    </div>
+    <hr class="lineseparator">
+    <div class="cardContainer" > 
+        {% if user.hasPrincipales is not empty %}
+            <ul class="cardInfo">
+                <li class="pre_{{card.prefix ~ '_' ~ user.org}}">
+                    <div class="cardName">Saldo Disponible: {{card.saldoDisponible}}</div>
+                    <div class="cardInfo">{{card.mask}}</div>
+
+                </li>
+            </ul>        
+            <div class="movementContainer" >
+                &Uacute;ltimos Movimientos
+            </div>
+
+        {% endif %}   
+
+        {% for movement in card.movimientos %}
+            <ul class="cardList">
+                <li class="movement">
+                    <div>{{movement.concepto}}</div>
+                    <div class="{{movement.tipo}}">{{movement.monto}}</div>
+                    <div>{{movement.fecha}}</div>
+                </li>
+            </ul>
+        {% endfor %}
+
+
+    </div>
+
+{%endblock%}

@@ -1,0 +1,11 @@
+## YAML Template.
+---
+username.not_blank: PUDRETE GERARDO
+username.not_null : PUDRETE GERARDIS
+username.too_short: PUDRETE GERARDOS
+username.too_long: PUDRETE GERARDOOS
+
+password.not_blank: PUDRETE GERARDO
+password.not_null : PUDRETE GERARDIS
+password.too_short: PUDRETE GERARDOS
+password.too_long: PUDRETE GERARDOOS

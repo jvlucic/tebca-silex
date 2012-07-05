@@ -1,37 +1,54 @@
-<html>
-    <head>
-        <title> Servi-Tebca M&oacute;vil </title>
-        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-        <link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.css">
-    </head>
-    <body>
+{% extends 'base.twig' %}
 
-        <div class="content" >
-            <div class="banner" > 
-                <img src="/assets/img/logoTebca.jpg" alt="Logo"/>
+{% form_theme form  'Form/form.twig' %}
+
+{% block content %}
+<div class="formContainer" > 
+    <form novalidate action="#" method="post">
+
+        <fieldset>
+            <legend> Ingrese sus crendenciales de acceso  </legend>
+
+            <div class="control-group">
+                {{ form_label(form.username, 'ID del cliente') }}
+                <div class="controls">
+                    {{ form_widget(form.username, { 'attr': {'class': 'input-xlarge'} } ) }}
+                </div>
             </div>
-            <div class="formContainer" > 
-                <form method="post" action="/login">
-                    <fieldset>
-                        <legend>Ingrese sus crendenciales de acceso</legend>
 
-                        <div class="control-group">
-                            <label class="control-label" for="input01">ID del cliente</label>
-                            <div class="controls">
-                                <input type="text" class="input-xlarge" id="input01" name="username">
-                            </div>
-                        </div>
+            <div class="control-group">
+                {{ form_label(form.password, 'Contraseña') }}
+                <div class="controls">
+                    {{ form_widget(form.password, { 'attr': {'class': 'input-xlarge'} } ) }}
+                </div>
+            </div>
+            {{ form_rest(form) }}
 
-                        <div class="control-group">
-                            <label class="control-label" for="input01">Contrase&ntilde;a</label>
-                            <div class="controls">
-                                <input type="password" class="input-xlarge" id="input01" name="password">
-                            </div>
-                        </div>
+            <input type="submit" name="submit" />
+        </fieldset>
 
-                    </fieldset>
-                </form>
-            </div>	
+        {% if form_errors(form)|length > 0 %}
+        <div class="alert alert-error" >
+            {{ form_errors(form) }}
         </div>
-    </body>
-</html>
+        {% endif %}   
+
+        {% if customError is not empty %}
+        <div class="alert alert-error" >
+            {{ customError }}
+        </div>
+        {% endif %}   
+
+
+    </form>
+
+
+
+
+</div>	
+{% endblock %}
+
+
+
+
+

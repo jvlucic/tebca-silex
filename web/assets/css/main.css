@@ -1,68 +1,224 @@
 body{
-	margin: 0px;
+    margin: 0px;
+}
+
+.footer{
+    text-align: center;
 }
 
 .content{
-	width:100%;
-	height:100%;
-	background-color: red;	
+    width:100%;
+    height:100%;
+    background-color: #dde9ed;
+}
+
+.content .lineseparator {
+    margin: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border: 1px solid  #c3d3d9;
+}
+
+.content .lineseparator2 {
+    margin: 0px ;
+    border-top: 0px;
+    border-bottom: 0px;
+    border: 1px solid  #b1b3b3;
 }
 
 .banner{
-	width:100%;
-	background-color: #DDD;	
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 5px;
-	padding-bottom: 5px;
-
+    width:100%;
+    background-color: #005aa9;	
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .banner img {
-	display: block;   
-	margin-left: auto;   
-	margin-right: auto;
-	height: 40px;
+    display: block;   
+    margin-left: auto;   
+    margin-right: auto;
+    height: 25px;
 }
 
 .userContent{
-	width:100%;
-	background-color: blue;	
-	padding-top: 3px;
-	padding-bottom: 3px;	
-	padding-left:10px;	
+    width:100%;
+    background-color: #cfe0e5;	
+    padding-top: 3px;
+    padding-bottom: 3px;	
+    padding-left:10px;
+    font-weight: bold;
+    color:#3b3e3c;
 }
 
+.cardInfo{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 0px;
+    background-color: #cfe0e5;
+}
+
+.movementContainer{
+    width:100%;
+    background-color: #337bba;	
+    padding-top: 3px;
+    padding-bottom: 3px;	
+    padding-left:10px;
+    color: #c1d7e9;
+}
+
+.typeContainer{
+    width:100%;
+    background-color: #f5f7f8;	
+    padding-top: 3px;
+    padding-bottom: 3px;	
+    padding-left:10px;	
+    font-weight: bold;
+    color:#3b3e3c;
+}
+
+
 .cardContainer{
-	width:100%;
-	background-color: red;	
-	margin: 0px;
-	padding: 0px;	
+    width:100%;
+    background-color: #efefef;	
+    margin: 0px;
+    padding: 0px;	
 }
 
 .cardList
 {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-	border-bottom: 1px solid gray;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid #b1b3b3;
+}
 
+.cardName{
+    font-weight: bold;
+    color:#454746;
+}
+
+.cardMask{
+    color:#3b3e3c;
 }
 
 li
 {
-	background-repeat: no-repeat;
-	background-position: 5px 50%;
-	padding: 10px 5px 5px 30px;
-	border-top: 1px solid gray;
-
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+    padding: 10px 5px 5px 45px;
 }
 
-li.pdf
+li a {
+    color:#3b3e3c;
+}
+
+li:hover, li:hover a , li:hover .cardName ,li:hover .cardMask, li:hover .ABONO, li:hover .CARGO{
+    background-color: #86a5aa;
+    color:#ffffff;
+    text-decoration: none;
+}
+
+li .movement{
+    color: #454746;
+}
+
+li.pre_pdf
 {
-	background-image: url(/assets/img/bullet_pdf.gif);
+    background-image: url(/assets/img/bullet_pdf.gif);
 }
+
+
 .formContainer{
-	padding-left: 5px;
-	padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }	
+
+.ABONO{
+    color:#28a061;
+}
+
+.CARGO{
+    color: #3b3e3c;
+}
+
+
+li.pre_E_715,li.pre_F_715,li.pre_H_715,li.pre_I_715,li.pre_J_715{
+    background-image: url(/assets/img/cardicons/715_E.png);
+}
+
+li.pre_Y_715,li.pre_G_715{
+    background-image: url(/assets/img/cardicons/715_G.png);
+}
+
+li.pre_B_715{
+    background-image: url(/assets/img/cardicons/715_B.png);
+}
+
+li.pre_C_715{
+    background-image: url(/assets/img/cardicons/715_C.png);
+}
+
+li.pre_D_715,li.pre_P_715{
+    background-image: url(/assets/img/cardicons/715_D.png);
+}
+
+
+li.pre_A_716,li.pre_C_716,li.pre_D_716,li.pre_P_716{
+    background-image: url(/assets/img/cardicons/715_P.png);
+}
+
+li.pre_B_716{
+    background-image: url(/assets/img/cardicons/716_B.png);
+}
+
+li.pre_I_716{
+    background-image: url(/assets/img/cardicons/715_E.png);
+}
+
+li.pre_3_717,li.pre_4_717,li.pre_5_717,li.pre_7_717{
+    background-image: url(/assets/img/cardicons/715_E.png);
+}
+
+li.pre_6_717,li.pre_8_717,li.pre_A_717,li.pre_C_717,li.pre_M_717,li.pre_P_717{
+    background-image: url(/assets/img/cardicons/715_P.png);
+}
+
+li.pre_B_717,li.pre_R_717,li.pre_V_717{
+    background-image: url(/assets/img/cardicons/716_B.png);
+}
+
+li.pre_L_717{
+    background-image: url(/assets/img/cardicons/717_L.png);
+}
+
+li.pre_Y_717{
+    background-image: url(/assets/img/cardicons/715_G.png);
+}
+
+
+li.pre_E_719{
+    background-image: url(/assets/img/cardicons/719_E.png);
+}
+
+li.pre_F_719{
+    background-image: url(/assets/img/cardicons/719_F.png);
+}
+
+li.pre_H_719{
+    background-image: url(/assets/img/cardicons/719_H.png);
+}
+
+li.pre_B_719,li.pre_N_719,li.pre_L_719,li.pre_W_719,li.pre_X_719{
+    background-image: url(/assets/img/cardicons/715_B.png);
+}
+
+li.pre_1_719,li.pre_A_719,li.pre_G_719,li.pre_M_719,li.pre_2_719,
+li.pre_3_719,li.pre_4_719,li.pre_5_719,li.pre_6_719,li.pre_7_719,
+li.pre_8_719,li.pre_C_719,li.pre_D_719,li.pre_I_719,li.pre_J_719,
+li.pre_O_719,li.pre_P_719,li.pre_Q_719,li.pre_R_719,li.pre_S_719,
+li.pre_T_719,li.pre_U_719,li.pre_V_719,li.pre_Y_719,li.pre_Z_719{
+    background-image: url(/assets/img/cardicons/719_1.png);
+}
