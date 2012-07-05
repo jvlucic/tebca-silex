@@ -20,8 +20,8 @@ $app = new Silex\Application();
 $app->register(new FormServiceProvider());
 
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(
-    'locale_fallback' => 'en',
-    'locale' => 'en',
+    'locale_fallback' => 'es',
+    'locale' => 'es',
 ));
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
