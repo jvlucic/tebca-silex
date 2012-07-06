@@ -1,11 +1,11 @@
 ## YAML Template.
 ---
-username.not_blank: PUDRETE GERARDO
-username.not_null : PUDRETE GERARDIS
-username.too_short: PUDRETE GERARDOS
-username.too_long: PUDRETE GERARDOOS
+username.not_blank: Debe ingresar una identificación
+username.not_null : Debe ingresar una identificación
+username.too_short: La Identificación es muy corta
+username.too_long:  La Identifiación sobrepasa la longitud establecida
 
-password.not_blank: PUDRETE GERARDO
-password.not_null : PUDRETE GERARDIS
-password.too_short: PUDRETE GERARDOS
-password.too_long: PUDRETE GERARDOOS
+password.not_blank: Debe ingresar una contraseña
+password.not_null : Debe ingresar una contraseña
+password.too_short: La Contraseña es muy corta
+password.too_long: La Contraseña sobrepasa la longitud establecida
