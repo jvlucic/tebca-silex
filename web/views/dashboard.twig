@@ -21,8 +21,13 @@
             </div>
         {% endif %}   
     <hr class="lineseparator2">
-        
-
+        {% for card in user.principales %}
+                <a href="/card/{{card.id}}" style="border: 0px;margin: 0px;padding: 0px; display:block"> 
+                    <div class="cardName">{{card.nombreProducto}}</div>
+                    <div class="cardMask">{{card.mask}}</div>
+                </a>
+        {% endfor %}
+    
         {% for card in user.principales %}
         <ul class="cardList">
             <li class="pre_{{card.prefix ~ '_' ~ user.org}}" >
