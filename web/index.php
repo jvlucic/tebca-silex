@@ -63,9 +63,9 @@ $app->match('/login', function (Request $request) use ($app) {
                     ))
                     ->add('password', 'password', array(
                         'error_bubbling' => true,
-                        'constraints' => array(new Assert\NotBlank(),
-                            new Assert\NotNull(),
-                            new Assert\MinLength(4),
+                        'constraints' => array(new Assert\NotBlank(array('message' => 'password.not_blank')),
+                            new Assert\NotNull(array('message' => 'password.not_null')),
+                            new Assert\MinLength(array('message' => 'password.too_short','limit' => 4 )),
                             new Assert\MaxLength(16)
                         )
                     ))
