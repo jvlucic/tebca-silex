@@ -165,7 +165,7 @@ label{
 }
 
 input{
-    width: 80%;
+    width: 100%;
     line-height: 1.5;
     font-size: 16px
 }
@@ -318,15 +318,12 @@ li .movement{
     color: #454746;
 }
 
-li.pre_pdf
-{
-    background-image: url(/assets/img/bullet_pdf.gif);
-}
 
 
 .formContainer{
-    padding-left: 5px;
-    padding-right: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
 }	
 
 .ABONO{
