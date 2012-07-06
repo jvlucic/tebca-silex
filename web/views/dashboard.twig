@@ -24,6 +24,8 @@
         {% for card in user.principales %}
                 <a href="/card/{{card.id}}" style="border: 0px;margin: 0px;padding: 0px; display:block"> 
                     CARD1
+                    <div class="cardName" style="display: block">{{card.nombreProducto}}</div>
+                    
                 </a>
         {% endfor %}
     
