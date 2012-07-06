@@ -59,7 +59,7 @@ class HttpClient {
                  
             }
             return $data;
-        } catch (Guzzle\Http\Exception\BadResponseException $e) {
+        } catch (\Exception $e) {
             return HttpClient::$errors["900"];
         }        
     }

@@ -106,6 +106,7 @@ $app->match('/login', function (Request $request) use ($app) {
             $result = DetailService::detail($card->getNroTarjeta(), "", $user->token, $user->identificacionCliente);
             if (array_key_exists('error_code', $result)) {
                 $customError = $result['error_message'];
+                return $app['twig']->render('error.twig', array( 'customError' => $customError ));
             } else {
                 $app['session']->get('user')->tarjetas[$id]=new \models\Card($result, $id);
                 return $app['twig']->render('detail.twig', array('card' => $app['session']->get('user')->tarjetas[$id], 'user' =>$app['session']->get('user')  ));

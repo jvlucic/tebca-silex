@@ -1,0 +1,24 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+<hr class="lineseparator" style="clear: both">
+
+<div class="btn-group  onebutton">
+    <a href="/login"> <button class="btn  onebutton" >Salir</button></a>
+</div>
+
+<hr class="lineseparator" style="clear: both">
+
+<div class="formContainer" > 
+    <div class="alert alert-error" style="width: 100%" >
+        <span style="text-align: center;display: block"> {{customError}}</span>        
+        <span style="text-align: center; display: block"> Intente Posteriormente</span>        
+
+    </div>
+</div>	
+{% endblock %}
+
+
+
+
+
