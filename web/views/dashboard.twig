@@ -28,9 +28,7 @@
             <li class="pre_{{card.prefix ~ '_' ~ user.org}}" >
                 <a href="/card/{{card.id}}" style="border: 0px;margin: 0px;padding: 0px;"> 
                     <div class="cardName">
-                        <a href="/card/{{card.id}}" style="border: 0px;margin: 0px;padding: 0px;">
                             {{card.nombreProducto}}
-                        </a>
                     </div>
                     <div class="cardMask">
                         <a href="/card/{{card.id}}" style="border: 0px;margin: 0px;padding: 0px;">
@@ -51,9 +49,20 @@
         {% endif %}   
 
         {% for card in user.suplementarias %}
-            <ul class="cardList">
-                <li class="pre_{{card.prefix ~ '_' ~ user.org}}"><a href="/card/{{card.id}}">{{card.nombreProducto}}</a></li>
-            </ul>
+        <ul class="cardList">
+            <li class="pre_{{card.prefix ~ '_' ~ user.org}}" >
+                <a href="/card/{{card.id}}" style="border: 0px;margin: 0px;padding: 0px;"> 
+                    <div class="cardName">
+                            {{card.nombreProducto}}
+                    </div>
+                    <div class="cardMask">
+                        <a href="/card/{{card.id}}" style="border: 0px;margin: 0px;padding: 0px;">
+                            {{card.mask}}
+                        </a>
+                    </div>
+                </a>
+            </li>
+        </ul>
         {% endfor %}
 
 
