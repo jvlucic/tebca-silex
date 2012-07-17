@@ -69,6 +69,24 @@ $app->match('/login', function (Request $request) use ($app) {
                             new Assert\MaxLength(16)
                         )
                     ))
+                    ->add('country', 'choice', array(
+                        'error_bubbling' => true,
+                        'constraints' => array(
+                            new Assert\NotBlank(array('message' => 'country.not_blank')),
+                            new Assert\NotNull(array('message' => 'country.not_null')),
+                        ),
+                        'choices' => array(
+                            '719_a' => 'Venezuela - Bolívares',
+                            '717_a' => 'Perú - Soles',
+                            '716_a' => 'Perú - Dolares',
+                            '716_b' => 'Colombia - Pesos',
+                            '716_c' => 'Colombia - Dolares',
+                            '715_a' => 'México - Pesos',
+                        ),
+                    ))
+
+                    
+                    
                     ->getForm();
             
             $customError="";
@@ -76,11 +94,15 @@ $app->match('/login', function (Request $request) use ($app) {
                 $form->bindRequest($request);
                 if ($form->isValid()) {
                     $data = $form->getData();
-                    $result=LoginService::login( $data['username'],  $data['password']);
+                    $country = $data['country'];
+                    $pos = strpos($country, "_");
+                    $country = substr($country, 0, $pos);
+                    $result=LoginService::login( $data['username'],  $data['password'],$country);
                     if (array_key_exists('error_code', $result)){
                         $customError=$result['error_message'];
                     }else{
                         $user =new User($result);
+                        $user->org=$country;
                         $user->nombreCliente=$result['nombre_cliente'];
                         $app['session']->set('token', $result["token"]);
                         $app['session']->set('user', $user);

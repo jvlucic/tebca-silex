@@ -18,14 +18,14 @@ use security\Security;
 
 class LoginService {
 
-    public static function login($username, $password) {
+    public static function login($username, $password,$org) {
 
         try {
             $lo = new LoginObject();
             $lo->setcardId($username);
             $lo->setidClient($username);
             $lo->setidOper("0");
-            $lo->setorg("719");
+            $lo->setorg($org);
             $lo->setpasswd(Security::MD5decrypt(strtoupper($password)));
             $body = Security::encrypt(json_encode($lo));
             $todecode='IePlh2SVRBShw1L4meazlyhrVU2I600AKShcpZMFqhjwTnIgjHP9xQTOUfgw8q0y/9r5scn24JsZZUfZlIHvtX7B31+AM+JvO6mWZ7THiclCKIk1pZtfdfNjuwDoRUiwJbkpx4LvVWpdoyf8i0/nvgcpCZxGW+0HrOP851tWJao=';
